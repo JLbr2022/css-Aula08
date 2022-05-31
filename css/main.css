@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  background-color: #FFFFFF;
+}
+
+.header {
+  grid-area: header;
+  height: 6.7em;
+  gap: 0;
+  background-color: #180E0C;
+  color: #FFFFFF;
+}
+
+.navigation {
+  grid-area: navigation;
+}
+
+.navbar ul,
+li,
+a {
+  /* color: rgb(105, 123, 137); */
+  color: #856159;
+  font-size: 1em;
+  text-decoration: none;
+  padding: 0em 0.5em;
+  list-style: none;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  /* display: inline-block; */
+}
+
+.navbar a:hover {
+  background-color: #856159;
+  box-shadow: .1em .1em #180e0c;
+  color: #180e0c;
+  transition: all 1s linear;
+  border-radius: .5em;
+}
+
+.fotoMain {
+  grid-area: fotoMain;
+  border-color: #412720;
+  border-style: solid;
+}
+
+.articulo1 {
+  grid-area: articulo1;
+  border-color: #000000;
+  border-style: solid;
+
+}
+
+.articulo2 {
+  grid-area: articulo2;
+  border-color: #000000;
+  border-style: solid;
+
+}
+
+.articulo3 {
+  grid-area: articulo3;
+  border-color: #000000;
+  border-style: solid;
+
+}
+
+.articulo4 {
+  grid-area: articulo4;
+  border-color: #000000;
+  border-style: solid;
+}
+
+.flora1 {
+  grid-area: flora1;
+  background-color: #37201A;
+  color: #856159;
+}
+
+.flora2 {
+  grid-area: flora2;
+  background-color: #37201A;
+  color: #856159;
+}
+
+.flora3 {
+  grid-area: flora3;
+  background-color: #37201A;
+  color: #856159;
+}
+
+.fauna1 {
+  grid-area: fauna1;
+  background-color: #37201A;
+  color: #856159;
+}
+
+.fauna2 {
+  grid-area: fauna2;
+  background-color: #37201A;
+  color: #856159;
+}
+
+.fauna3 {
+  grid-area: fauna3;
+  background-color: #37201A;
+  color: #856159;
+}
+
+.scmfoto {
+  grid-area: scmfoto;
+  background-color: #37201A;
+  color: #856159;
+}
+
+.scbresena1 {
+  grid-area: scbresena1;
+  background-color: #37201A;
+  color: #856159;
+}
+
+.scblinks {
+  grid-area: scblinks;
+  background-color: #37201A;
+  color: #856159;
+}
+
+.footer {
+  grid-area: footer;
+  height: 2.6em;
+  background-color: #180e0c;
+  color: #412720;
+}
+
+.container .sidebar,
+.container .header,
+.container .footer,
+.container .articulo1,
+.container .articulo2,
+.container .articulo3,
+.container .articulo4 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* RESPONSIVITY TO MOBILE DEVICES */
+
+.container {
+  width: 90%;
+  margin: 2em auto;
+  /* gap: 0em; */
+  display: grid;
+  grid-template-areas:
+    "header     header"
+    "fotoMain   fotoMain"
+    "articulo1  articulo2"
+    "articulo3  articulo4"
+    "flora1     flora1"
+    "flora2     flora2"
+    "flora3     flora3"
+    "fauna1     fauna1"
+    "fauna2     fauna2"
+    "fauna3     fauna3"
+    "scmfoto    scmfoto"
+    "scbresena1 scbresena1"
+    "scblinks   scblinks"
+    "navigation navigation"
+    "footer     footer";
+}
+
+/* RESPONSIVITY TO TABLET DEVICES */
+
+@media (min-width: 620px) {
+  .container {
+    grid-template-areas:
+      "header     header"
+      "navigation navigation"
+      "fotoMain   fotoMain"
+      "articulo1  articulo2"
+      "articulo3  articulo4"
+      "flora1     fauna1"
+      "flora2     fauna2"
+      "flora3     fauna3"
+      "scmfoto    scmfoto"
+      "scbresena1 scblinks"
+      "links      links"
+      "footer     footer";
+  }
+
+  .container .header {
+    gap: .5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .container .scbresena1,
+  .container .scblinks {
+    background-color: #291713;
+  }
+
+  .container .header .navbar ul,
+  li,
+  a {
+    padding: 0.1em 0.5em;
+  }
+
+  .container .footer {
+    height: 4em;
+    margin: 0;
+    gap: 0;
+
+  }
+}
+
+/* RESPONSIVITY TO >= 950 */
+
+@media (min-width: 1050px) {
+  .container {
+    width: 90%;
+    margin: 2em auto;
+    grid-template-areas:
+      "header     header      navigation navigation"
+      "fotoMain   fotoMain    fotoMain  fotoMain"
+      "articulo1  articulo2   articulo3 articulo4"
+      "flora1     fauna1      scmfoto   scmfoto"
+      "flora2     fauna2      scmfoto   scmfoto"
+      "flora3     fauna3      scmfoto   scmfoto"
+      "scbresena1 scbresena1  scblinks  scblinks"
+      "footer     footer      footer    footer";
+  }
+
+  .container .header,
+  .container .navigation {
+    background-color: #180e0c;
+    color: #856159;
+    margin-left: 0%;
+    height: 6em;
+    font-size: larger;
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .container .navigation,
+  .navbar ul,
+  li,
+  a {
+    color: #FFFFFF;
+    background-color: #180E0C;
+    font-size: 1em;
+    height: 4.8em;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container .scbresena1,
+  .container .scblinks {
+    background-color: #291713;
+  }
+
+  .container .header {
+    padding-left: 8em;
+  }
+
+  .container .footer {
+    height: 4em;
+  }
+}
