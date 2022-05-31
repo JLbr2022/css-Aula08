@@ -11,7 +11,7 @@
 .header {
   grid-area: header;
   height: 6.7em;
-  gap: 0;
+  /* gap: 0; */
   background-color: #180E0C;
   color: #FFFFFF;
 }
@@ -50,6 +50,11 @@ a {
   border-style: solid;
 }
 
+.articles {
+  grid-area: articles;
+  background-color: aqua;
+}
+
 .articulo1 {
   grid-area: articulo1;
   border-color: #000000;
@@ -70,6 +75,7 @@ a {
   border-style: solid;
 
 }
+
 
 .articulo4 {
   grid-area: articulo4;
@@ -159,22 +165,52 @@ a {
   /* gap: 0em; */
   display: grid;
   grid-template-areas:
-    "header     header"
-    "fotoMain   fotoMain"
-    "articulo1  articulo2"
-    "articulo3  articulo4"
-    "flora1     flora1"
-    "flora2     flora2"
-    "flora3     flora3"
-    "fauna1     fauna1"
-    "fauna2     fauna2"
-    "fauna3     fauna3"
-    "scmfoto    scmfoto"
-    "scbresena1 scbresena1"
-    "scblinks   scblinks"
-    "navigation navigation"
-    "footer     footer";
+    "header"
+    "fotoMain"
+    "articulo1"
+    "articulo2"
+    "articulo3"
+    "articulo4"
+    "flora1"
+    "flora2"
+    "flora3"
+    "fauna1"
+    "fauna2"
+    "fauna3"
+    "scmfoto"
+    "scbresena1"
+    "scblinks"
+    "navigation"
+    "footer";
+
 }
+
+.container .articulo1 .img_article,
+.container .articulo2 .img_article,
+.container .articulo3 .img_article,
+.container .articulo4 .img_article {
+  width: 100%;
+}
+
+.container .articulo1,
+.container .articulo2,
+.container .articulo3,
+.container .articulo4 {
+  /* width: 100%; */
+  /* float: bottom; */
+  display: flex;
+  flex-direction: column;
+}
+
+.container .fotoMain img {
+  max-height: 13.4em;
+  width: 100%;
+  margin: 0em auto;
+  display: flex;
+  align-items: center;
+
+}
+
 
 /* RESPONSIVITY TO TABLET DEVICES */
 
@@ -184,8 +220,8 @@ a {
       "header     header"
       "navigation navigation"
       "fotoMain   fotoMain"
-      "articulo1  articulo2"
-      "articulo3  articulo4"
+      "articulo1   articulo2"
+      "articulo3   articulo4"
       "flora1     fauna1"
       "flora2     fauna2"
       "flora3     fauna3"
@@ -215,9 +251,34 @@ a {
 
   .container .footer {
     height: 4em;
-    margin: 0;
-    gap: 0;
+    /* margin: 0;
+    gap: 0; */
+  }
 
+  .container .articles {
+    gap: 1em;
+    /* vertical-align: text-bottom; */
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container .articulo1 .img_article,
+  .container .articulo2 .img_article,
+  .container .articulo3 .img_article,
+  .container .articulo4 .img_article {
+    width: 100%;
+  }
+
+  .container .articulo1,
+  .container .articulo2,
+  .container .articulo3,
+  .container .articulo4 {
+    /* width: 100%; */
+    /* float: bottom; */
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -230,7 +291,7 @@ a {
     grid-template-areas:
       "header     header      navigation navigation"
       "fotoMain   fotoMain    fotoMain  fotoMain"
-      "articulo1  articulo2   articulo3 articulo4"
+      "articulo1   articulo2    articulo3  articulo4"
       "flora1     fauna1      scmfoto   scmfoto"
       "flora2     fauna2      scmfoto   scmfoto"
       "flora3     fauna3      scmfoto   scmfoto"
@@ -249,6 +310,37 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .container .articles {
+    gap: 1em;
+    /* vertical-align: text-bottom; */
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container .articulo1 .img_article,
+  .container .articulo2 .img_article,
+  .container .articulo3 .img_article,
+  .container .articulo4 .img_article {
+    width: 100%;
+  }
+
+  .container .articulo1,
+  .container .articulo2,
+  .container .articulo3,
+  .container .articulo4 {
+    /* width: 100%; */
+    /* float: bottom; */
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .container .fotoMain img {
+    max-height: 18em;
   }
 
   .container .navigation,
@@ -271,8 +363,13 @@ a {
     background-color: #291713;
   }
 
-  .container .header {
-    padding-left: 8em;
+  .container .header,
+  .container .navigation,
+  .container .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding-left: 8em; */
   }
 
   .container .footer {
